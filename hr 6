@@ -1,0 +1,36 @@
+import random
+N = int(input('Задайте размер списка:'))
+mylist = []
+a = int(input('Задайте начало диапазона:'))
+b = int(input('Задайте конец диапазона:'))
+for i in range(N):
+    mylist.append(random.randint(a, b))
+print('Сформированный cписок', mylist)
+print('Наибольшее число из списка:', max(mylist))
+print('Наименьшее число из списка:', min(mylist))
+mylist.sort()
+print('Список отсортированный по возрастанию', mylist)
+mylist.sort(reverse = True)
+print('Список отсортированный по убыванию', mylist)
+----
+N = int(input('Задайте размер списка:'))
+mylist = []
+for i in range(N):
+    mylist.append(random.randint(0, 1))
+print('Получившийся список', mylist)
+register_err = mylist.count(0)
+register_wrn = mylist.count(1)
+print('Количество нулей', register_err)
+print('Количество единиц', register_wrn)
+indices = [i for i in range(0, len(mylist)) if mylist[i]==0]
+print('Список, содержащий индексы нулей', indices)
+----
+N = int(input('Задайте размер списка:'))
+mylist = []
+for i in range(N):
+    mylist.append(random.randint(0, 9))
+print('Начальный список', mylist)
+n = int(input('Задайте значение, которое нужно удалить из списка:'))
+while n in mylist:
+    mylist.remove(n)
+print('Список после удаления элементов', mylist)
