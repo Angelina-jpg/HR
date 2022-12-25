@@ -1,0 +1,78 @@
+n = int(input())
+for i in range(1, 11):
+    print(n, 'x', i, '=', n * i)
+    
+
+k = 0
+n = int(input('Колличество цифр:'))
+for i in range(1, n + 1):
+    s = float(input('Введите число:'))
+    k += s
+print(k)
+
+n = input('Введите число или слово:')
+while n != 'PRINT':
+    print('id' + n)
+    n = input('Введите число или слово ещё раз:')
+    
+n, s = float(input('Введите два числа:')), float(input())
+while n and s != 0:
+    print(n + s)
+    print(n - s)
+    print(n * s)
+    print(n / s)
+    n, s = float(input('Введите два числа:')), float(input())
+    
+s=input('Введите никнейм:')
+if len(s) <3:
+    print('Ник-нейм должен состоять минимум из 3 символов!')
+elif 3 <= len(s) <= 15:
+    print('Ник-нейм принят')
+else:
+    print('Ник-нейм может состоять максимум из 15 символов!')
+    
+    
+x, y = map(float, input("x, y = ").split())
+if x * y > 0:
+    if x > 0:
+        print('Точка принадлежит первой четверти')
+        s = input('Введи слово:')
+        d = input('Введи другое слово:')
+        if len(s) > len(d):
+            print(d, '- Самая короткая строка')
+        else:
+            print(s, '- Самая короткая строка')
+    else:
+        print('Точка принадлежит третьей четверти')
+        q = input('Введи слово:')
+        print('x =',  (len(q)*x))
+        print('y =',  (len(q)*y))
+else:
+    if x > 0:
+        print('Точка принадлежит четвертой четверти')
+        if abs(x) > abs(y):
+            print('Координата x – наибольшая по модулю')
+        elif abs(x) == abs(y):
+            print('Координата равны наибольшая по модулю')
+        else:
+            print('Координата y – наибольшая по модулю')
+    else:
+        print('Точка принадлежит второй четверти')
+        f = (2 * abs(x) - y) / y ** 2
+        print(f)
+        
+a = input().lower()
+if 'кот' in a:
+    print('Мы погладили кота!')
+else:
+    print('А где кот? >:[')
+    
+
+k=0
+s=0
+for a in range(1,5):
+    b=int(input())
+    if b%2==1:
+        k+=1
+        s+=b
+print(k,s)
